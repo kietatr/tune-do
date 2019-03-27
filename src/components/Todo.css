@@ -1,0 +1,29 @@
+.Todo {
+  color: #919191;
+  padding: 1.2rem 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.Todo .text {
+  max-width: 400px;
+}
+
+.Todo .icon {
+  color: #ffffff;
+  background-color: #ffffff;
+  border: 3px solid #A1A1A1;
+  transition: background-color 0.3s ease;
+}
+
+.Todo .icon:hover {
+  background-color: #A1A1A1;
+}
+
+.box-hover {
+  transition: box-shadow 0.3s ease;
+}
+
+.box-hover:hover {
+  box-shadow: 0 3px 20px 0 rgba(0,0,0,0.20);
+}

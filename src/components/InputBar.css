@@ -1,0 +1,68 @@
+#InputBar {
+  margin-top: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.box {
+  padding: 1.7rem 1.5rem;
+  border-radius: 1.1rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.box-shadow {
+  box-shadow: 0 3px 10px 0 rgba(0,0,0,0.15);
+}
+
+.box-hover {
+  transition: box-shadow 0.3s ease;
+}
+
+.box-hover:hover {
+  box-shadow: 0 3px 20px 0 rgba(0,0,0,0.20);
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  flex-direction: center;
+}
+
+.icon {
+  margin-right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  color: #ffffff;
+  background-color: #A1A1A1;
+  border-radius: 100%;
+  transition: transform 0.75s ease;
+}
+
+#InputBar .icon:hover {
+  transform: rotate(180deg);
+}
+
+input {
+  border: none;
+  background: none;
+  width: 65vw;
+  max-width: 400px;
+}
+
+input::placeholder {
+  font-weight: 300;
+  color: #A1A1A1;
+}
+
+input:focus {
+  outline: none;
+}
