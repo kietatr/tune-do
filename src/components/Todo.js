@@ -9,14 +9,20 @@ import soundfile from "./assets/sounds/Xylophone.hardrubber.ff.A4.stereo.mp3";
 
 export default class Todo extends Component {
   state = {
-    playSound: true
+    playSound: false
   }
 
   playSound = () => {
     this.setState({ playSound: true })
   }
 
+  stopSound = () => {
+    this.setState({ playSound: false })
+  }
+
   render() {
+    console.log(">>>> " + this.props.value + " " + this.state.playSound);
+
     return (
       <li className="Todo box center" onMouseEnter={this.playSound}>
         <button className="icon center">
@@ -25,12 +31,19 @@ export default class Todo extends Component {
         <span>
           {this.props.value}
         </span>
-        <FaVolume className="volume-icon" size={20} />
+        <span className="volume-icon">
+          <FaVolume size={20} />
+        </span>
+
         {this.state.playSound &&
-          <Sound
-            url={soundfile}
-            playStatus={Sound.status.PLAYING}
-          />
+          <div>
+            <h1>Playing</h1>
+            <Sound
+              url={soundfile}
+              playStatus={Sound.status.PLAYING}
+              onFinishedPlaying={this.stopSound}
+            />
+          </div>
         }
       </li>
     );
