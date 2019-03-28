@@ -2,7 +2,7 @@
 
 :root {
   --primary-color: #56DEFC;
-  --primary-color-transparent: rgba(86,222,252, 0.7);
+  --primary-color-transparent: rgba(86,222,252, 0.8);
   --grey: #919191;
 }
 
@@ -14,18 +14,15 @@
   padding: 1.3rem;
 }
 
-.center-screen {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
+/* App Content */
 
 .AppContent {
   max-width: 500px;
   background-color: white;
   border-radius: 1.1rem;
 }
+
+/* App Header */
 
 .AppHeader {
   border-top-left-radius: 1.1rem;
@@ -49,6 +46,16 @@
   margin: 0;
   line-height: 1.1;
   color: white;
+}
+
+
+/* Misc. */
+
+.center-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .box-shadow {
