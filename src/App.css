@@ -1,10 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,500');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
+:root {
+  --primary-color: #56DEFC;
+  --primary-color-transparent: rgba(86,222,252, 0.7);
+  --grey: #919191;
+}
 
 .App {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
+  background-color: #baf2ff;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
   font-size: 20px;
-  padding: 0 1.3rem;
+  padding: 1.3rem;
 }
 
 .center-screen {
@@ -12,4 +19,43 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+}
+
+.AppContent {
+  max-width: 500px;
+  background-color: white;
+  border-radius: 1.1rem;
+}
+
+.AppHeader {
+  border-top-left-radius: 1.1rem;
+  border-top-right-radius: 1.1rem;
+  border-bottom: 7px solid var(--primary-color);
+  padding: 2.5rem 1.8rem;
+}
+
+.AppHeader.bg-img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--primary-color-transparent);
+  background-image: url("https://images.unsplash.com/photo-1515266591878-f93e32bc5937?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80");
+  background-blend-mode: overlay;
+}
+
+.AppHeader .time {
+  font-weight: 400;
+  font-size: 1.8rem;
+  margin: 0;
+  line-height: 1.1;
+  color: white;
+}
+
+.box-shadow {
+  box-shadow: 0 3px 10px 0 var(--primary-color-transparent);
+  transition: box-shadow 0.3s ease;
+}
+
+.box-shadow:hover {
+  box-shadow: 0 7px 15px 0 var(--primary-color-transparent);
 }

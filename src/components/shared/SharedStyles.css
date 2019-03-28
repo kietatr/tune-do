@@ -1,0 +1,39 @@
+/* Override Default Styles */
+
+button {
+  background: none;
+  border: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Box */
+
+.box {
+  padding: 1.5rem;
+  border-radius: 1.1rem;
+  display: flex;
+  flex-direction: row;
+}
+
+/* Icon */
+
+.icon {
+  margin-right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  color: white;
+  background-color: var(--primary-color);
+  border-radius: 100%;
+  transition: transform 0.75s ease;
+}
+
+/* Misc. */
+
+.center {
+  display: flex;
+  align-items: center;
+  flex-direction: center;
+}
