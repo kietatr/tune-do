@@ -9,7 +9,8 @@ import TodoList from './components/TodoList';
 class App extends Component {
   state = {
     inputValue: '',
-    todos: ["Click me!", "Create a to-do list app", "Take a walk"]
+    todos: ["Click me!", "Create a to-do list app", "Take a walk"],
+    dones: ["Create a to-do list app"]
   }
 
   onInputChange = (event) => {
@@ -29,8 +30,9 @@ class App extends Component {
   }
 
   render() {
+    console.log("Dones: " + this.state.dones);
     return (
-      <div className="App center-screen">
+      <div className="App center-screen bg-img">
         <div className="AppContent box-shadow">
           <header className="AppHeader bg-img">
             <p className="time">{moment().format("dddd")}</p>
@@ -41,7 +43,7 @@ class App extends Component {
             onSubmit={this.onInputSubmit}
             onChange={this.onInputChange} 
           />
-          <TodoList todos={this.state.todos} />
+          <TodoList todos={this.state.todos} dones={this.state.dones} />
         </div>
       </div>
     );

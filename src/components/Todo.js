@@ -8,24 +8,39 @@ import ReactHowler from 'react-howler';
 
 export default class Todo extends Component {
   state = {
+    done: this.props.done,
     playSound: false
   }
 
-  handleClick = () => { this.setState({ playSound: true }) }
+  handleTodoClick = () => { this.setState({ playSound: true }) }
 
   handleSoundEnd = () => { this.setState({ playSound: false }) }
 
-  render() {
-    console.log(this.props.todo + " " + this.state.playSound);
+  handleIconClick = () => { this.setState({ done: !(this.state.done) }) }
 
+  render() {
     return (
-      <li className="Todo box center slide-down" onClick={this.handleClick}>
-        <button className="icon center">
-          <FaCheck size={20} />
-        </button>
-        <span>
-          {this.props.todo}
-        </span>
+      <li className="Todo box center-row slide-down" onClick={this.handleTodoClick}>
+        {this.state.done ? (
+          <div className="center-row">
+            <button className="icon center icon-done" onClick={this.handleIconClick}>
+              <FaCheck size={20} />
+            </button>
+            <span className="text-done strike">
+              {this.props.todo}
+            </span>
+          </div>
+        ) : (
+          <div className="center-row">
+            <button className="icon center" onClick={this.handleIconClick}>
+              <FaCheck size={20} />
+            </button>
+            <span>
+              {this.props.todo}
+            </span>
+          </div>
+        )}
+        
         <span className="volume-icon">
           <FaVolume size={20} />
         </span>

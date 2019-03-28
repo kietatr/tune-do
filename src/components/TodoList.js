@@ -10,7 +10,11 @@ export default class TodoList extends Component {
       <ul className="TodoList">
         {
           this.props.todos.map(todo => (
-            <Todo key={todo.toString()} todo={todo} />
+            <Todo 
+              key={todo.toString()}
+              todo={todo}
+              done={this.props.dones.includes(todo)} 
+            />
           ))
         }
       </ul>

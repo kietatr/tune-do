@@ -4,6 +4,7 @@
   --primary-color: #56DEFC;
   --primary-color-transparent: rgba(86,222,252, 0.8);
   --grey: #919191;
+  --light-grey: #c5c5c5;
 }
 
 .App {
@@ -31,12 +32,13 @@
   padding: 2.5rem 1.8rem;
 }
 
-.AppHeader.bg-img {
+.bg-img {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: var(--primary-color-transparent);
-  background-image: url("https://images.unsplash.com/photo-1515266591878-f93e32bc5937?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80");
+  /*background-image: url("https://images.unsplash.com/photo-1515266591878-f93e32bc5937?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80");*/
+  background-image: url("https://picsum.photos/300/200/?random");
   background-blend-mode: overlay;
 }
 
@@ -56,6 +58,12 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+}
+
+.center-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .box-shadow {

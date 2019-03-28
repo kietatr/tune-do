@@ -1,14 +1,13 @@
 .Todo {
   color: var(--grey);
-  display: flex;
-  align-items: center;
   transition: transform 0.4s ease, background-color 0.2s ease;
 }
 
 /* Todo: enlarge when hover */
 
-.Todo:hover {
-  transform: scale(1.2);
+.Todo:hover, 
+.Todo:active {
+  transform: scale(1.1);
   color: var(--primary-color);
   background-color: white;
   box-shadow: 0 7px 15px 0 var(--primary-color-transparent);
@@ -20,7 +19,7 @@
   color: white;
   background-color: white;
   border: 3px solid var(--primary-color);
-  transition: background-color 0.3s ease;
+  transition: all 0.5s ease;
 }
 
 .Todo .icon:hover {
@@ -36,4 +35,19 @@
 
 .Todo:active .volume-icon {
  visibility: visible;
+}
+
+/* Done styles */
+
+.Todo .icon-done {
+  color: var(--primary-color);
+  border: none;
+}
+
+.Todo .icon-done:hover {
+  background-color: white;
+}
+
+.Todo .text-done {
+  color: var(--light-grey);
 }
