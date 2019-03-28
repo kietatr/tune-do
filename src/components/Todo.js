@@ -3,48 +3,37 @@ import './shared/SharedStyles.css';
 import './Todo.css';
 import { FaCheck, FaVolume } from "react-icons/fa";
 
-import Sound from 'react-sound';
-
 import soundfile from "./assets/sounds/Xylophone.hardrubber.ff.A4.stereo.mp3";
+import ReactHowler from 'react-howler';
 
 export default class Todo extends Component {
   state = {
     playSound: false
   }
 
-  playSound = () => {
-    this.setState({ playSound: true })
-  }
+  handleClick = () => { this.setState({ playSound: true }) }
 
-  stopSound = () => {
-    this.setState({ playSound: false })
-  }
+  handleSoundEnd = () => { this.setState({ playSound: false }) }
 
   render() {
-    console.log(">>>> " + this.props.value + " " + this.state.playSound);
+    console.log(this.props.todo + " " + this.state.playSound);
 
     return (
-      <li className="Todo box center" onMouseEnter={this.playSound}>
+      <li className="Todo box center slide-down" onClick={this.handleClick}>
         <button className="icon center">
           <FaCheck size={20} />
         </button>
         <span>
-          {this.props.value}
+          {this.props.todo}
         </span>
         <span className="volume-icon">
           <FaVolume size={20} />
         </span>
-
-        {this.state.playSound &&
-          <div>
-            <h1>Playing</h1>
-            <Sound
-              url={soundfile}
-              playStatus={Sound.status.PLAYING}
-              onFinishedPlaying={this.stopSound}
-            />
-          </div>
-        }
+        <ReactHowler
+          src={soundfile}
+          playing={this.state.playSound}
+          onEnd={this.handleSoundEnd}
+        />
       </li>
     );
   }

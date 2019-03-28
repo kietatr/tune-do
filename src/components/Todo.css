@@ -2,8 +2,19 @@
   color: var(--grey);
   display: flex;
   align-items: center;
-  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, background-color 0.2s ease;
 }
+
+/* Todo: enlarge when hover */
+
+.Todo:hover {
+  transform: scale(1.2);
+  color: var(--primary-color);
+  background-color: white;
+  box-shadow: 0 7px 15px 0 var(--primary-color-transparent);
+}
+
+/* Todo check icon */
 
 .Todo .icon {
   color: white;
@@ -16,18 +27,13 @@
   background-color: var(--primary-color);
 }
 
-.Todo:hover {
-  transform: scale(1.2);
-  background-color: white;
-  color: var(--primary-color);
-  box-shadow: 0 7px 15px 0 var(--primary-color-transparent);
-}
+/* Volume icon: show when click */
 
 .Todo .volume-icon {
   margin-left: 0.5rem;
   visibility: hidden;
 }
 
-.Todo:hover .volume-icon {
+.Todo:active .volume-icon {
  visibility: visible;
 }

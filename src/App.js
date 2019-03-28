@@ -9,13 +9,13 @@ import TodoList from './components/TodoList';
 class App extends Component {
   state = {
     inputValue: '',
-    todos: ["Hover over me!", "Me too!", "Go for a walk", "Create a to-do list app", "Try not to fall asleep"]
+    todos: ["Click me!", "Create a to-do list app", "Take a walk"]
   }
 
   onInputChange = (event) => {
     this.setState({
       inputValue: event.target.value
-    });
+    })
   }
 
   onInputSubmit = (event) => {
@@ -37,7 +37,7 @@ class App extends Component {
             <p className="time">{moment().format("MMMM D, YYYY")}</p>
           </header>
           <InputBar
-            value={this.state.inputValue} 
+            value={this.state.inputValue}
             onSubmit={this.onInputSubmit}
             onChange={this.onInputChange} 
           />

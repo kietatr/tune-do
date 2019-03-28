@@ -37,3 +37,12 @@ button:focus {
   align-items: center;
   flex-direction: center;
 }
+
+.slide-down {
+  animation: slideDown 1s;
+}
+
+@keyframes slideDown {
+  from { transform: translate(0, -20px); opacity: 0; }
+  to { transform: translate(0, 0); opacity: 1; }
+}
