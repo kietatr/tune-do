@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import moment from 'moment';
 import SimpleStorage from "react-simple-storage";
 import { FaTrashAlt } from 'react-icons/fa';
-import ReactCSSTransitionGroup from 'react-transition-group';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
@@ -23,6 +22,7 @@ class App extends Component {
   }
 
   setDefaultStates = () => {
+
     // If there's nothing in localStorage (i.e. first time using the app)
     if (localStorage.length === 0) {
       this.setState({
@@ -49,10 +49,13 @@ class App extends Component {
 
   onInputSubmit = (event) => {
     event.preventDefault();
-    if (this.state.inputValue !== '') {
+
+    let inputValue = this.state.inputValue;
+    let todos = this.state.todos;
+    if ((inputValue !== '') && (!todos.includes(inputValue))) {
       this.setState({
         inputValue: '',
-        todos: [...this.state.todos, this.state.inputValue]
+        todos: [...todos, inputValue]
       });
     }
   }
@@ -75,6 +78,7 @@ class App extends Component {
   }
 
   removeTodo = (todo) => {
+
     // Remove from todos
     let newTodos = this.state.todos;
     newTodos = newTodos.filter(item => item !== todo);
@@ -89,6 +93,8 @@ class App extends Component {
   }
 
   render() {
+    
+    // TODO: Remove when done
     /////// DEBUG
     localStorage.clear();
     /////// END OF DEBUG
