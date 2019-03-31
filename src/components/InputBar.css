@@ -3,7 +3,7 @@
   border-top-right-radius: 0;
 }
 
-.InputBar .icon:hover {
+.InputBar .add-icon:hover {
   transform: rotate(180deg);
 }
 

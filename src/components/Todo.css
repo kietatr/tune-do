@@ -3,48 +3,65 @@
   transition: transform 0.4s ease, background-color 0.2s ease;
 }
 
-/* Todo: enlarge when hover */
+/* Only for small screens (e.g. phone) */
 
-.Todo:hover, 
-.Todo:active {
-  transform: scale(1.1);
-  color: var(--primary-color);
-  background-color: white;
-  box-shadow: 0 7px 15px 0 var(--primary-color-transparent);
+@media screen and (max-width:769px) {
+  .Todo.todo-done {
+    animation: todo-done 1s ease;
+  }
+
+  @keyframes todo-done {
+    50% { 
+      transform: scale(1.1);
+      background-color: white;
+      box-shadow: 0 7px 15px 0 var(--primary-color-transparent); 
+    }
+  }
+}
+
+/* Only for large screens (>= laptop) */
+
+@media screen and (min-width:769px) {
+  .Todo:hover {
+    transform: scale(1.1);
+    color: var(--primary-color);
+    background-color: white;
+    box-shadow: 0 7px 15px 0 var(--primary-color-transparent);
+  }
+  .Todo .check-icon:hover {
+    background-color: var(--primary-color);
+  }
 }
 
 /* Todo check icon */
 
-.Todo .icon {
+.Todo .check-icon {
   color: white;
   background-color: white;
-  border: 3px solid var(--primary-color);
+  border: 3.5px solid var(--primary-color);
   transition: all 0.5s ease;
-}
-
-.Todo .icon:hover {
-  background-color: var(--primary-color);
 }
 
 /* Volume icon: show when click */
 
 .Todo .volume-icon {
   margin-left: 0.5rem;
-  visibility: hidden;
+  color: var(--primary-color);
+  opacity: 0;
 }
 
 .Todo:active .volume-icon {
- visibility: visible;
+  opacity: 1;
 }
 
 /* Done styles */
 
-.Todo .icon-done {
+.Todo .check-icon-done {
   color: var(--primary-color);
   border: none;
 }
 
-.Todo .icon-done:hover {
+.Todo .check-icon-done:hover {
   background-color: white;
 }
 

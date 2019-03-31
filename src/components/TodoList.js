@@ -13,7 +13,9 @@ export default class TodoList extends Component {
             <Todo 
               key={todo.toString()}
               todo={todo}
-              done={this.props.dones.includes(todo)} 
+              done={this.props.dones.includes(todo)}
+              addDone={this.props.addDone}
+              removeDone={this.props.removeDone} 
             />
           ))
         }
