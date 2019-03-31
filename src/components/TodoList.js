@@ -10,7 +10,7 @@ export default class TodoList extends Component {
     return (
       <TransitionGroup className="TodoList" component={"ul"}>
           {
-            this.props.todos.map(todo => (
+            this.props.todos.map((todo,index) => (
               <CSSTransition
                 key={todo.toString()}
                 timeout={500}
@@ -18,12 +18,14 @@ export default class TodoList extends Component {
               >
                 <Todo 
                   key={todo.toString()}
+                  index={index}
                   todo={todo}
                   done={this.props.dones.includes(todo)}
                   addDone={this.props.addDone}
                   removeDone={this.props.removeDone}
                   isDeleting={this.props.isDeleting}
-                  removeTodo={this.props.removeTodo} 
+                  removeTodo={this.props.removeTodo}
+                  song={this.props.song}
                 />
               </CSSTransition>
             ))

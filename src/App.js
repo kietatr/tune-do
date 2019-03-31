@@ -6,6 +6,7 @@ import { FaTrashAlt } from 'react-icons/fa';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 
+import { getRandomSong } from './utils/soundFiles';
 import InputBar from './components/InputBar';
 import TodoList from './components/TodoList';
 
@@ -28,16 +29,32 @@ class App extends Component {
       this.setState({
         todos: [
           "Hi there! Thanks for stopping by! Let me help you get to know me better :)",
-          "Click me right *here* (come on, don't be shy) and I will play some tunes for you", 
+          "I'm just a basic to-do list app with a fun feature: I can play some tunes!",
+          "Click me right *here* (come on, don't be shy) and I will play a note for you! (don't forget to turn on your volume first)",
+          "Now, try clicking each to-do tab from top to bottom and guess what song I'm playing ^_^",
+          "Introducing some basic to-do list features:", 
           "<-- Click the circle to mark me as 'done'", 
-          "<-- Now click the checkmark to make me normal again",
-          "Go to the top and type in what you want to do today (^_^) (press <Return> on your keyboard or click the plus icon to add to the list)",
-          `If you want to delete me :sad:, go to the top and click the trash icon to the right of the photo to enter delete mode. Then, click my trash icon here -->`,
-          "Even if you refresh/close the page, I will be the same no matter what :)",
-          "Have a productive day!"
+          "<-- Now click the checkmark to make me 'not done' again",
+          "Go to the top and type in what you want to do today (press <Return> on your keyboard or click the plus icon to add that to the list)",
+          "If you want to delete me :sad:, go to the top and click the trash icon to the right of the photo to enter 'Delete Mode'. Then, click the trash icon here on my right -->",
+          "If you refresh or close the page, and visit me again later, I will stay the same as when you last saw me (localStorage FTW!)",
+          "Have a productive day!",
+          ".",
+          "..",
+          "...",
+          "....",
+          "Have you guessed which song I'm playing yet?",
+          ".....",
+          "(Just some filler text to finish the song)",
+          "......",
+          "(Lorem Ipsum)",
+          "(Meow)",
+          "(Woof)",
         ],
         dones: [
-          "<-- Now click the checkmark to make me normal again"
+          "<-- Now click the checkmark to make me 'not done' again",
+          "(Just some filler text to finish the song)",
+          "(Woof)",
         ]
       })
     }
@@ -97,8 +114,9 @@ class App extends Component {
   render() {
 
     // TODO: Remove when done
-    /////// DEBUG
+
     localStorage.clear();
+    
     /////// END OF DEBUG
 
     return (
@@ -131,6 +149,7 @@ class App extends Component {
             removeDone={this.removeDone} 
             isDeleting={this.state.isDeleting}
             removeTodo={this.removeTodo}
+            song={getRandomSong()}
           />
         </div>
       </div>
