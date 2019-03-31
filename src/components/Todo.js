@@ -40,7 +40,7 @@ export default class Todo extends Component {
   render() {
     return (
       <li 
-        className={"Todo box center-row slide-down " + (this.state.done ? "todo-done" : "")} 
+        className={"Todo box center-row " + (this.state.done ? "todo-done" : "")} 
         onClick={this.handleTodoClick}
       >
         {/* Check icon */}

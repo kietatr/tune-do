@@ -6,13 +6,16 @@
   transition: all 0.5s ease;
 }
 
-.Todo.deleted {
-  animation: deleted 1s;
-}
+/* Only for small screens (e.g. phone) */
 
-@keyframes deleted {
-  0% { transform: translate(0, 0); opacity: 1; }
-  100% { transform: translate(0, -10px); opacity: 0; }
+@media screen and (max-width:769px) {
+  .Todo:active {
+    animation: todo-pop 0.5s ease;
+  }
+
+  @keyframes todo-pop {
+    50% { transform: scale(1.1); }
+  }
 }
 
 /* Only for large screens (>= laptop) */
