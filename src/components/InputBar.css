@@ -27,6 +27,6 @@ input::placeholder {
 
 .InputBar input:hover, 
 .InputBar input:focus {
-  border-bottom: 2px solid var(--primary-color);
+  border-bottom: 3px solid var(--primary-color);
   transition: 0.5s;
 }

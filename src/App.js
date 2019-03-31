@@ -27,12 +27,14 @@ class App extends Component {
     if (localStorage.length === 0) {
       this.setState({
         todos: [
-          "Hi there! Thanks for stopping by!",
+          "Hi there! Thanks for stopping by! Let me help you get to know me better :)",
           "Click me right *here* (come on, don't be shy) and I will play some tunes for you", 
           "<-- Click the circle to mark me as 'done'", 
           "<-- Now click the checkmark to make me normal again",
           "Go to the top and type in what you want to do today (^_^) (press <Return> on your keyboard or click the plus icon to add to the list)",
-          "If you want to delete me :sad:, go to the top and click the trash icon on the right to enter delete mode (tan Tan TAAN). Then, click the trash icon here on my right side -->"
+          `If you want to delete me :sad:, go to the top and click the trash icon to the right of the photo to enter delete mode. Then, click my trash icon here -->`,
+          "Even if you refresh/close the page, I will be the same no matter what :)",
+          "Have a productive day!"
         ],
         dones: [
           "<-- Now click the checkmark to make me normal again"
@@ -93,7 +95,7 @@ class App extends Component {
   }
 
   render() {
-    
+
     // TODO: Remove when done
     /////// DEBUG
     localStorage.clear();

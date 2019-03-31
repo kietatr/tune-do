@@ -3,7 +3,7 @@ import './shared/SharedStyles.css';
 import './Todo.css';
 import { FaCheck, FaVolume, FaTrashAlt } from "react-icons/fa";
 
-import soundfile from "./assets/sounds/Xylophone.hardrubber.ff.A4.stereo.mp3";
+import soundfile from "../assets/sounds/Xylophone.hardrubber.ff.A4.stereo.mp3";
 import ReactHowler from 'react-howler';
 
 export default class Todo extends Component {
