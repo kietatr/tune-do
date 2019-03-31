@@ -19,3 +19,14 @@ input::placeholder {
   font-weight: 400;
   color: var(--grey);
 }
+
+.InputBar input {
+  border-bottom: 1px solid #ccc;
+  transition: 0.5s;
+}
+
+.InputBar input:hover, 
+.InputBar input:focus {
+  border-bottom: 2px solid var(--primary-color);
+  transition: 0.5s;
+}

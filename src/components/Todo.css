@@ -1,9 +1,18 @@
 .Todo {
   color: var(--grey);
+  background: white;
   overflow-x: hidden;
   margin: 10px 0;
-  background: white;
   transition: all 0.5s ease;
+}
+
+.Todo.deleted {
+  animation: deleted 1s;
+}
+
+@keyframes deleted {
+  0% { transform: translate(0, 0); opacity: 1; }
+  100% { transform: translate(0, -10px); opacity: 0; }
 }
 
 /* Only for large screens (>= laptop) */
@@ -27,16 +36,26 @@
   transition: all 0.5s ease;
 }
 
+/* Todo text */
+
+.Todo .text {
+  width: 100%;
+}
+
 /* Volume icon: show when click */
 
 .Todo .volume-icon {
   margin-left: 0.5rem;
   color: var(--primary-color);
-  opacity: 0;
 }
 
-.Todo:active .volume-icon {
-  opacity: 1;
+/* Trash icon */
+
+.Todo .trash-icon {
+  color: var(--red);
+  background-color: white;
+  border: 3px solid var(--red);
+  margin-right: 0;
 }
 
 /* Done styles */

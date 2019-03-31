@@ -5,6 +5,7 @@
   --primary-color-transparent: rgba(86,222,252, 0.8);
   --grey: #919191;
   --light-grey: #c5c5c5;
+  --red: rgb(252, 100, 100);
 }
 
 .App {
@@ -20,7 +21,6 @@
 
 .AppContent {
   max-width: 500px;
-  /*background-color: white;*/
   border-radius: 1.1rem;
 }
 
@@ -29,8 +29,12 @@
 .AppHeader {
   border-top-left-radius: 1.1rem;
   border-top-right-radius: 1.1rem;
-  border-bottom: 7px solid var(--primary-color);
   padding: 2.5rem 1.8rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .AppHeader .header-time {
@@ -41,13 +45,35 @@
   color: white;
 }
 
+.AppHeader .header-trash-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0;
+  background-color: rgba(255,255,255,0.5);
+}
+
+.AppHeader .header-trash-icon.active {
+  background-color: var(--red);
+}
+
+/* Only for large screens (>= laptop) */
+
+@media screen and (min-width:769px) {
+  .AppHeader .header-trash-icon:hover {
+    background-color: var(--red);
+  }
+}
+
 .bg-img {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #0fa5c6;
-  background-image: url("https://media.wired.com/photos/5a970eb4927dc94e67685b0e/master/pass/matterhorn-802950172.jpg");
-  /*background-image: url("https://picsum.photos/g/300/200/?random");*/
+  /*background-image: url("https://media.wired.com/photos/5a970eb4927dc94e67685b0e/master/pass/matterhorn-802950172.jpg");*/
+  background-image: url("https://picsum.photos/g/300/200/?random");
   background-blend-mode: overlay;
 }
 

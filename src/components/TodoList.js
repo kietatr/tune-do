@@ -15,7 +15,9 @@ export default class TodoList extends Component {
               todo={todo}
               done={this.props.dones.includes(todo)}
               addDone={this.props.addDone}
-              removeDone={this.props.removeDone} 
+              removeDone={this.props.removeDone}
+              isDeleting={this.props.isDeleting}
+              removeTodo={this.props.removeTodo} 
             />
           ))
         }
