@@ -19,6 +19,9 @@ export default class TodoList extends Component {
             />
           ))
         }
+        <div className="todoList-progress">
+          <h4>{this.props.dones.length + "/" + this.props.todos.length + " DONE"}</h4>
+        </div>
       </ul>
     );
   }

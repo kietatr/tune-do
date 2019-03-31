@@ -52,7 +52,7 @@ export default class Todo extends Component {
           </span>
         </div>
         
-        <span className="volume-icon">
+        <span className={"volume-icon" + " " + (this.state.done ? "volume-icon-done" : "")}>
           <FaVolume size={20} />
         </span>
 
@@ -61,6 +61,7 @@ export default class Todo extends Component {
           playing={this.state.playSound}
           onEnd={this.handleSoundEnd}
         />
+
       </li>
     );
   }

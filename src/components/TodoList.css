@@ -3,3 +3,12 @@ ul {
   padding-left: 0;
   margin: 0;
 }
+
+.todoList-progress {
+  margin-top: 1.5rem;
+	color: white;
+  letter-spacing: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
