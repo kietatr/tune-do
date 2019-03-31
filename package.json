@@ -10,7 +10,8 @@
     "react-howler": "^3.7.4",
     "react-icons": "^3.5.0",
     "react-scripts": "2.1.8",
-    "react-simple-storage": "^1.4.1"
+    "react-simple-storage": "^1.4.1",
+    "react-transition-group": "^2.7.1"
   },
   "scripts": {
     "start": "react-scripts start",

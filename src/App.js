@@ -31,7 +31,8 @@ class App extends Component {
           "Click me right *here* (come on, don't be shy) and I will play some tunes for you", 
           "<-- Click the circle to mark me as 'done'", 
           "<-- Now click the checkmark to make me normal again",
-          "Go to the top and type in what you want to do today (^_^) (press <Return> on your keyboard or click the plus icon to add to the list)"
+          "Go to the top and type in what you want to do today (^_^) (press <Return> on your keyboard or click the plus icon to add to the list)",
+          "If you want to delete me :sad:, go to the top and click the trash icon on the right to enter delete mode (tan Tan TAAN). Then, click the trash icon here on my right side -->"
         ],
         dones: [
           "<-- Now click the checkmark to make me normal again"

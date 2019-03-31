@@ -61,7 +61,7 @@ export default class Todo extends Component {
         {
           this.props.isDeleting &&
           <button 
-            className="icon center trash-icon slide-down"
+            className="icon center trash-icon"
             onClick={this.handleTrashIconClick}
           >
             <FaTrashAlt size={20} />

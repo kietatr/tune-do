@@ -56,6 +56,17 @@
   background-color: white;
   border: 3px solid var(--red);
   margin-right: 0;
+  animation: wobble 0.2s ease-in-out infinite;
+}
+
+.Todo .trash-icon:hover {
+  opacity: 0.5;
+}
+
+@keyframes wobble {
+  0% { transform: translate(0,-2px); }
+  50% { transform: translate(0, 2px); }
+  100% { transform: translate(0,-2px); }
 }
 
 /* Done styles */
