@@ -3,7 +3,6 @@ import moment from 'moment';
 import SimpleStorage from "react-simple-storage";
 import { FaTrashAlt } from 'react-icons/fa';
 
-import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 
 import { getRandomSong } from './utils/soundFiles';
@@ -53,7 +52,11 @@ class App extends Component {
         ],
         dones: [
           "<-- Now click the checkmark to make me 'not done' again",
+          ".",
+          "..",
+          "...",
           "(Just some filler text to finish the song)",
+          "......",
           "(Woof)",
         ]
       })
@@ -113,7 +116,7 @@ class App extends Component {
 
   render() {
 
-    // TODO: Remove when done
+    // DEBUG
 
     // localStorage.clear();
     
@@ -151,6 +154,12 @@ class App extends Component {
             removeTodo={this.removeTodo}
             song={getRandomSong()}
           />
+
+          <div className="signature">
+            <p>
+              Created with ♥ by <a target="_blank" rel="noopener noreferrer" href="https:\\kietatr.com">Kiet Tran</a>
+            </p>
+          </div>
         </div>
       </div>
     );

@@ -29,7 +29,7 @@
 .AppHeader {
   border-top-left-radius: 1.1rem;
   border-top-right-radius: 1.1rem;
-  padding: 2.5rem 1.8rem;
+  padding: 2.3rem 2rem;
 
   display: flex;
   flex-direction: row;
@@ -39,7 +39,7 @@
 
 .AppHeader .header-time {
   font-weight: 400;
-  font-size: 1.8rem;
+  font-size: 2rem;
   margin: 0;
   line-height: 1.1;
   color: white;
@@ -78,6 +78,25 @@
   /*background-image: url("https://media.wired.com/photos/5a970eb4927dc94e67685b0e/master/pass/matterhorn-802950172.jpg");*/
   background-image: url("https://picsum.photos/g/300/200/?random");
   background-blend-mode: overlay;
+}
+
+/* Signature */
+
+.signature {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.signature a {
+  color: white;
+}
+
+.signature a:hover {
+  color: blue;
 }
 
 /* Misc. */

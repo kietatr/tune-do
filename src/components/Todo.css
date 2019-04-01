@@ -12,7 +12,7 @@
     transform: scale(1.1);
     color: var(--primary-color);
   }
-  .Todo .check-icon:hover, .Todo .check-icon:focus {
+  .Todo .check-icon:hover {
     background-color: var(--primary-color);
   }
 }
@@ -46,13 +46,6 @@
   width: 100%;
 }
 
-/* Volume icon: show when click */
-
-.Todo .volume-icon {
-  margin-left: 0.5rem;
-  color: var(--primary-color);
-}
-
 /* Trash icon */
 
 .Todo .trash-icon {
@@ -72,6 +65,17 @@
   50% { transform: translate(0, 2px); }
   100% { transform: translate(0,-2px); }
 }
+
+/* Volume icon: show when click */
+
+/*.Todo .volume-icon {
+  margin-left: 0.5rem;
+  color: var(--primary-color);
+}
+
+.Todo.todo-done .volume-icon {
+  color: white;
+}*/
 
 /* Done styles */
 

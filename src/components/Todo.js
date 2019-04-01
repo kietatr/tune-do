@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './shared/SharedStyles.css';
 import './Todo.css';
-import { FaCheck, FaTrashAlt } from "react-icons/fa";
+import { FaCheck, FaTrashAlt, FaVolume } from "react-icons/fa";
 
 import ReactHowler from 'react-howler';
 
@@ -42,8 +42,8 @@ export default class Todo extends Component {
       <li 
         className={"Todo box center-row " + (this.state.done ? "todo-done" : "")} 
         onClick={this.handleTodoClick}
-        onMouseEnter={this.handleTodoClick}
         onFocus={this.handleTodoClick}
+        onMouseEnter={this.handleTodoClick}
       >
         {/* Check icon */}
         <button 
@@ -68,6 +68,14 @@ export default class Todo extends Component {
             <FaTrashAlt size={20} />
           </button>
         }
+
+        {/* Volume icon */}
+        {/*
+          this.state.playSound &&
+          <div className="center volume-icon">
+            <FaVolume size={22} />
+          </div>
+        */}
 
         <ReactHowler
           src={this.props.song[this.props.index % this.props.song.length]}
