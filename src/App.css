@@ -9,7 +9,7 @@
 }
 
 .App {
-  background: rgb(186,242,255);
+  background: #38bcda;
   background: linear-gradient(145deg, rgba(186,242,255,1) 0%, rgba(15,165,198,1) 100%);
   font-family: 'Raleway', sans-serif;
   font-weight: 700;

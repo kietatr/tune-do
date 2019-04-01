@@ -6,27 +6,28 @@
   transition: all 0.5s ease;
 }
 
-/* Only for small screens (e.g. phone) */
-
-@media screen and (max-width:769px) {
-  .Todo:active {
-    animation: todo-pop 0.5s ease;
-  }
-
-  @keyframes todo-pop {
-    50% { transform: scale(1.1); }
-  }
-}
-
 /* Only for large screens (>= laptop) */
-
-@media screen and (min-width:769px) {
+@media screen and (min-width:769px) and (pointer: fine) {
   .Todo:hover {
     transform: scale(1.1);
     color: var(--primary-color);
   }
   .Todo .check-icon:hover {
     background-color: var(--primary-color);
+  }
+}
+
+/* iPad Pro, phone, tablets */
+@media only screen and (min-device-width: 1024px) and (max-device-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5),
+(pointer: coarse) {
+  .Todo:active {
+    animation: pop 0.3s ease;
+  }
+  .Todo.todo-done {
+    animation: pop 1s ease;
+  }
+  @keyframes pop {
+    50% { transform: scale(1.1); }
   }
 }
 
@@ -94,16 +95,4 @@
 
 .Todo .volume-icon-done {
   color: white;
-}
-
-/* Only for small screens (e.g. phone) */
-
-@media screen and (max-width:769px) {
-  .Todo.todo-done {
-    animation: todo-done-pop 1s ease;
-  }
-
-  @keyframes todo-done-pop {
-    50% { transform: scale(1.1); }
-  }
 }

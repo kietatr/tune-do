@@ -8,16 +8,6 @@ const allNotes = [
   'G4', 'G5', 'G6', 'G7', 'Gb4', 'Gb5', 'Gb6', 'Gb7'
 ];
 
-const selectedNotes = [
-  'A4', 'A5', 'A6', 'A7',
-  'B4', 'B5', 'B6', 'B7',
-  'C5', 'C6', 'C7', 'C8',
-  'D5', 'D6', 'D7',
-  'E5', 'E6', 'E7',
-  'F4', 'F5', 'F6', 'F7',
-  'G4', 'G5', 'G6', 'G7'
-];
-
 const titanicThemeNotes = [
   'E5', 'E5', 'E5', 'E5', 'Eb5', 'E5',
   'E5', 'Eb5', 'E5', 'Gb5', 'Ab5', 'Gb5',
@@ -53,7 +43,7 @@ export const letItBe = getSoundFiles(letItBeNotes);
 export const getRandomSong = () => {
   const titanicTheme = getSoundFiles(titanicThemeNotes);
   const letItBe = getSoundFiles(letItBeNotes);
-  
+
   const songs = [titanicTheme, letItBe];
   let randomI = Math.floor(Math.random() * songs.length);
   return songs[randomI];
