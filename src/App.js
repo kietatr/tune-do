@@ -117,9 +117,7 @@ class App extends Component {
   render() {
 
     // DEBUG
-
     // localStorage.clear();
-    
     /////// END OF DEBUG
 
     return (
