@@ -115,7 +115,7 @@ class App extends Component {
 
     // TODO: Remove when done
 
-    localStorage.clear();
+    // localStorage.clear();
     
     /////// END OF DEBUG
 

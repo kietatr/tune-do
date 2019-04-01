@@ -8,11 +8,11 @@
 
 /* Only for large screens (>= laptop) */
 @media screen and (min-width:769px) and (pointer: fine) {
-  .Todo:hover {
+  .Todo:hover, .Todo:focus {
     transform: scale(1.1);
     color: var(--primary-color);
   }
-  .Todo .check-icon:hover {
+  .Todo .check-icon:hover, .Todo .check-icon:focus {
     background-color: var(--primary-color);
   }
 }
@@ -85,7 +85,7 @@
   border: none;
 }
 
-.Todo .check-icon-done:hover {
+.Todo .check-icon-done:hover, .Todo .check-icon-done:focus {
   background-color: white;
 }
 
