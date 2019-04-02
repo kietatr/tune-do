@@ -8,16 +8,27 @@ import ReactHowler from 'react-howler';
 export default class Todo extends Component {
   state = {
     done: false,
-    playSound: false
+    playSound: false,
+    touched: false
   }
 
   componentDidMount() {
-    this.setState({ done: this.props.done });
+    this.setState({ 
+      done: this.props.done 
+    });
   }
 
-  handleTodoClick = () => { this.setState({ playSound: true }) }
+  handleTodoClick = () => { 
+    this.setState({ 
+      playSound: true 
+    }) 
+  }
 
-  handleSoundEnd = () => { this.setState({ playSound: false }) }
+  handleSoundEnd = () => { 
+    this.setState({ 
+      playSound: false 
+    }) 
+  }
 
   handleCheckIconClick = () => {
     this.setState(
@@ -34,18 +45,21 @@ export default class Todo extends Component {
   }
 
   handleTrashIconClick = () => {
-    this.props.removeTodo(this.props.todo)
+    this.props.removeTodo(this.props.todo);
   }
 
   render() {
     return (
       <li 
-        className={"Todo box center-row " + (this.state.done ? "todo-done" : "")} 
+        className={"Todo box center-row " + (this.state.done ? "todo-done " : "")} 
         onClick={this.handleTodoClick}
+        onMouseEnter={this.handleTodoClick}
+        onFocus={this.handleTodoClick}
       >
         {/* Check icon */}
         <button 
-          className={"icon center check-icon " + (this.state.done ? "check-icon-done" : "")} 
+          className={"icon center check-icon " + (this.state.done ? "check-icon-done " : "")
+          } 
           onClick={this.handleCheckIconClick}
         >
           <FaCheck size={20} />

@@ -81,6 +81,7 @@
 
 .signature {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   color: white;
@@ -94,6 +95,11 @@
 
 .signature a:hover {
   color: blue;
+}
+
+.signature-icon {
+  margin-left: 0.7rem;
+  margin-right: 0.7rem;
 }
 
 /* Misc. */

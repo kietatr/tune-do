@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import moment from 'moment';
 import SimpleStorage from "react-simple-storage";
-import { FaTrashAlt } from 'react-icons/fa';
+import { FaTrashAlt, FaGithub, FaBehance, FaInstagram } from 'react-icons/fa';
 
 import './App.css';
 
@@ -151,6 +151,17 @@ class App extends Component {
             <p>
               Created with ♥ by <a target="_blank" rel="noopener noreferrer" href="https:\\kietatr.com">Kiet Tran</a>
             </p>
+            <span>
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/kietatr" className="signature-icon">
+                <FaGithub size={25} />
+              </a>
+              <a target="_blank" rel="noopener noreferrer" href="https://www.behance.net/kietatr" className="signature-icon">
+                <FaBehance size={25} />
+              </a>
+              <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/kietatr/" className="signature-icon">
+                <FaInstagram size={25} />
+              </a>
+            </span>
           </div>
         </div>
       </div>
