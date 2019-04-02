@@ -42,8 +42,6 @@ export default class Todo extends Component {
       <li 
         className={"Todo box center-row " + (this.state.done ? "todo-done" : "")} 
         onClick={this.handleTodoClick}
-        onFocus={this.handleTodoClick}
-        onMouseEnter={this.handleTodoClick}
       >
         {/* Check icon */}
         <button 
