@@ -5,7 +5,7 @@
   --primary-color-transparent: rgba(86,222,252, 0.8);
   --grey: #919191;
   --light-grey: #c5c5c5;
-  --red: rgb(252, 100, 100);
+  --my-red: rgb(252, 100, 100);
 }
 
 .App {
@@ -46,9 +46,6 @@
 }
 
 .AppHeader .header-trash-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 2.5rem;
   height: 2.5rem;
   margin: 0;
@@ -56,14 +53,14 @@
 }
 
 .AppHeader .header-trash-icon.active {
-  background-color: var(--red);
+  background-color: var(--my-red);
 }
 
 /* Only for large screens (>= laptop) */
 
 @media screen and (min-width:769px) {
   .AppHeader .header-trash-icon:hover {
-    background-color: var(--red);
+    background-color: var(--my-red);
   }
   .AppHeader .header-trash-icon.active:hover {
     background-color: rgba(255,255,255,0.5);

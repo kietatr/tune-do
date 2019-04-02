@@ -10,10 +10,11 @@
 
 input {
   border: none;
+  border-radius: 0;
   outline: none;
   background: none;
   padding: 0;
-  width: 100%;
+  width: 85%;
   font-family: 'Raleway', sans-serif;
   font-size: 1.3rem;
 }

@@ -117,7 +117,7 @@ class App extends Component {
   render() {
 
     // DEBUG
-    // localStorage.clear();
+    localStorage.clear();
     /////// END OF DEBUG
 
     return (
@@ -132,7 +132,7 @@ class App extends Component {
               <p className="header-time">{moment().format("MMMM D, YYYY")}</p>
             </div>
             <button 
-              className={"icon header-trash-icon " + (this.state.isDeleting ? "active" : "")}
+              className={"icon center header-trash-icon " + (this.state.isDeleting ? "active" : "")}
               onClick={this.handleTrashIconClick}
             >
               <FaTrashAlt size={20} />
