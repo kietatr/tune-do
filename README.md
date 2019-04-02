@@ -11,13 +11,13 @@ Built with React ⚛️ (my first React app :innocent:).
 ## Screenshots
 
 <p align="center">
-  <img src="screenshots/tune-do-1.png" alt="Tune Do App Screenshot 1">
-  <img src="screenshots/tune-do-2.png" alt="Tune Do App Screenshot 2">
-  <img src="screenshots/tune-do-3.png" alt="Tune Do App Screenshot 3">
+  <img src="screenshots/gifs/tune-do.gif" alt="Tune Do App Screenshot GIF">
 </p>
 
 <p align="center">
-  <img src="screenshots/gifs/tune-do.gif" alt="Tune Do App Screenshot GIF">
+  <img src="screenshots/tune-do-1.png" alt="Tune Do App Screenshot 1">
+  <img src="screenshots/tune-do-2.png" alt="Tune Do App Screenshot 2">
+  <img src="screenshots/tune-do-3.png" alt="Tune Do App Screenshot 3">
 </p>
 
 ## How to compile and run the source code
