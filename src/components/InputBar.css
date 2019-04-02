@@ -19,6 +19,7 @@ input {
   background: none;
   padding: 0;
   width: 85%;
+  color: var(--grey);
   font-family: 'Raleway', sans-serif;
   font-size: 1.3rem;
 }
