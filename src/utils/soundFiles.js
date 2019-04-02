@@ -33,6 +33,22 @@ const cantHelpFallingInLove_Notes = [
   'G5', 'A5', 'B5', 'C5', 'D5', 'E5', 'F5', 'E5', 'D5', 'C5',
 ];
 
+const laVieEnRose_Notes = [
+  'D6', 'Db6', 'B5', 'A5', 'Gb5', 'D6', 'Db6',
+  'B5', 'A5', 'Gb5', 'D6', 'Db6', 'B5',
+  'A5', 'Gb5', 'Db5', 'D5', 'Db6', 'B5', 'A5',
+  'E6', 'D6', 'Db6', 'B5', 'G5', 'D6', 'Db6',
+  'B5', 'A5', 'G5', 'E5', 'Db6', 'B5',
+  'A5', 'G5', 'Eb5', 'E5', 'Db6','B5', 'A5',
+];
+
+const megalovania_Notes = [
+  'D5', 'D5', 'D6', 'A5', 'Ab5', 'G5', 'F5', 'D5', 'F5', 'G5',
+  'C5', 'C5', 'D6', 'A5', 'Ab5', 'G5', 'F5', 'D5', 'F5', 'G5',
+  'B4', 'B4', 'D6', 'A5', 'Ab5', 'G5', 'F5', 'D5', 'F5', 'G5',
+  'Bb4', 'Bb4', 'D6', 'A5', 'Ab5', 'G5', 'F5', 'D5', 'F5', 'G5',
+];
+
 const getSoundFiles = (notes) => {
   const mySoundFiles = [];
   for (let i = 0; i < notes.length; i++) {
@@ -51,9 +67,11 @@ export const titanicTheme = getSoundFiles(titanicTheme_Notes);
 export const letItBe = getSoundFiles(letItBe_Notes);
 export const cityOfStars = getSoundFiles(cityOfStars_Notes);
 export const cantHelpFallingInLove = getSoundFiles(cantHelpFallingInLove_Notes);
+export const laVieEnRose = getSoundFiles(laVieEnRose_Notes);
+export const megalovania = getSoundFiles(megalovania_Notes);
 
 export const getRandomSong = () => {
-  const songs = [titanicTheme, letItBe, cityOfStars, cantHelpFallingInLove];
+  const songs = [titanicTheme, letItBe, cityOfStars, cantHelpFallingInLove, laVieEnRose, megalovania];
   let randomI = Math.floor(Math.random() * songs.length);
   return songs[randomI];
 }

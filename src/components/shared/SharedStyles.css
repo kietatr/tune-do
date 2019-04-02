@@ -32,12 +32,6 @@ button:focus {
 
 /* Misc. */
 
-.center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .slide-down {
   animation: slideDown 1s;
   transition: transform 0.5s ease, opacity 0.5s ease;

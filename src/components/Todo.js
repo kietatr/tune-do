@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './shared/SharedStyles.css';
 import './Todo.css';
-import { FaCheck, FaTrashAlt, FaVolume } from "react-icons/fa";
+import { FaCheck, FaTrashAlt } from "react-icons/fa";
 
 import ReactHowler from 'react-howler';
 

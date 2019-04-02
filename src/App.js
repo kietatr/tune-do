@@ -5,7 +5,7 @@ import { FaTrashAlt, FaGithub, FaBehance, FaInstagram } from 'react-icons/fa';
 
 import './App.css';
 
-import { getRandomSong } from './utils/soundFiles';
+import { getRandomSong, laVieEnRose } from './utils/soundFiles';
 import InputBar from './components/InputBar';
 import TodoList from './components/TodoList';
 
@@ -22,15 +22,15 @@ class App extends Component {
   }
 
   setDefaultStates = () => {
-
     // If there's nothing in localStorage (i.e. first time using the app)
     if (localStorage.length === 0) {
       this.setState({
         todos: [
-          "Hi there! Thanks for stopping by! Let me help you get to know me better :)",
-          "I'm just a basic to-do list app with a fun feature: I can play some tunes!",
-          "Click me right *here* (come on, don't be shy) and I will play a note for you! (don't forget to turn on your volume first) (Note: right now I can't play sounds on mobile devices though, maybe in the future)",
-          "Now, try clicking each to-do tab from top to bottom and guess what song I'm playing ^_^",
+          "Hi there! Thanks for stopping by! Let me introduce myself :)",
+          "I'm a basic to-do list app with a fun feature: I can play some tunes!",
+          "Click me right *here* (come on, don't be shy) and I will play a note for you! (don't forget to turn on your volume first)",
+          "(Note: if you're viewing this on a phone or tablet, the audio only works if you use your earphone. Weird, right? Is it just me?)",
+          "Now, try clicking each to-do tab from top to bottom and guess what song I'm playing~~",
           "Introducing some basic to-do list features:", 
           "<-- Click the circle to mark me as 'done'", 
           "<-- Now click the checkmark to make me 'not done' again",
@@ -42,10 +42,9 @@ class App extends Component {
           "..",
           "...",
           "Have you guessed which song I'm playing yet?",
-          "If you don't like this song, refresh the page to get a new song (you may need to refresh a few times because the songs are chosen randomly)",
+          "If you don't like this song, refresh the page to get a new song (you may need to refresh again because the songs are chosen randomly)",
           ".....",
           "(Just some filler text to finish the song)",
-          "......",
           "(Lorem Ipsum)",
           "(Meow)",
           "(Woof)",
@@ -56,7 +55,6 @@ class App extends Component {
           "..",
           "...",
           "(Just some filler text to finish the song)",
-          "......",
           "(Woof)",
         ]
       })
@@ -114,6 +112,10 @@ class App extends Component {
   }
 
   render() {
+    /// DEBUG
+    // localStorage.clear();
+    /// END DEBUG
+
     return (
       <div className="App center-screen">
 
