@@ -11,7 +11,7 @@ Built with React ⚛️ (my first React app :innocent:).
 ## Screenshots
 
 <p align="center">
-  <img src="screenshots/gifs/tune-do.gif" alt="Tune Do App Screenshot GIF" width="500">
+  <img src="screenshots/gifs/tune-do.gif" alt="Tune Do App Screenshot GIF" width="800">
 </p>
 
 <p align="center">
