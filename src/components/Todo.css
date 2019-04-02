@@ -37,22 +37,23 @@
   color: white;
   background-color: white;
   border: 3.5px solid var(--primary-color);
+  margin-right: 1rem;
   transition: all 0.5s ease;
 }
 
 /* Todo text */
 
 .Todo .text {
-  width: 85%;
+  width: 80%;
 }
 
 /* Trash icon */
 
 .Todo .trash-icon {
-  color: var(--my-red);
-  background-color: white;
-  border: 3px solid var(--my-red);
-  margin-right: 0;
+  color: white;
+  background-color: var(--my-red);
+  /*border: 3px solid var(--my-red);*/
+  margin-left: 1rem;
   animation: wobble 0.2s ease-in-out infinite;
 }
 

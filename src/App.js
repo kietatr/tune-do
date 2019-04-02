@@ -29,7 +29,7 @@ class App extends Component {
         todos: [
           "Hi there! Thanks for stopping by! Let me help you get to know me better :)",
           "I'm just a basic to-do list app with a fun feature: I can play some tunes!",
-          "Click me right *here* (come on, don't be shy) and I will play a note for you! (don't forget to turn on your volume first)",
+          "Click me right *here* (come on, don't be shy) and I will play a note for you! (don't forget to turn on your volume first) (Note: right now I can't play sounds on mobile devices though, maybe in the future)",
           "Now, try clicking each to-do tab from top to bottom and guess what song I'm playing ^_^",
           "Introducing some basic to-do list features:", 
           "<-- Click the circle to mark me as 'done'", 
@@ -100,7 +100,6 @@ class App extends Component {
   }
 
   removeTodo = (todo) => {
-
     // Remove from todos
     let newTodos = this.state.todos;
     newTodos = newTodos.filter(item => item !== todo);
